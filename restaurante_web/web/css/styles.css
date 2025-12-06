@@ -1,0 +1,163 @@
+/* styles.css — Tema: Tradicional Mexicano (El Zarape) */
+
+/* Paleta */
+:root{
+  --zarape-rojo: #C62828;   /* primario */
+  --zarape-verde: #2E7D32;  /* secundario */
+  --zarape-dorado: #F9A825; /* acento */
+  --zarape-crema: #FFF8E1;  /* fondo */
+  --texto-oscuro: #212121;
+  --blanco: #ffffff;
+}
+
+/* Reset pequeño (compatibilidad con bootstrap) */
+body{
+  background: linear-gradient(180deg, var(--zarape-crema) 0%, #FFFDF6 100%);
+  color: var(--texto-oscuro);
+  font-family: "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* NAVBAR */
+.navbar{
+  background: linear-gradient(90deg, var(--zarape-rojo) 0%, #A71F1F 100%) !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.navbar .navbar-brand{
+  font-weight:700;
+  letter-spacing:0.6px;
+}
+.navbar .nav-link{
+  color: rgba(255,255,255,0.95) !important;
+  transition: all .18s ease;
+}
+.navbar .nav-link:hover{
+  transform: translateY(-2px);
+  color: var(--zarape-dorado) !important;
+}
+
+/* FOOTER */
+footer{
+  background: linear-gradient(90deg, #9e1e1e, var(--zarape-rojo));
+  color: var(--blanco);
+  border-top: 4px solid rgba(0,0,0,0.06);
+}
+
+/* CARDS */
+.card{
+  border-radius: 12px;
+  border: 0;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 8px 24px rgba(33,33,33,0.06);
+}
+
+/* CABECERAS DE CARD: colores por tipo */
+.card-header.bg-success{
+  background: linear-gradient(90deg, var(--zarape-verde), #23692a) !important;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-header.bg-primary{
+  background: linear-gradient(90deg, #2b6db3 0%, #1f558d 100%) !important;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Títulos dentro de cards */
+.card-header .fw-bold{
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+/* BOTONES (estética Zarape) */
+.btn-success{
+  background: linear-gradient(90deg, var(--zarape-verde), #1e6b2b);
+  border: none;
+  box-shadow: 0 6px 12px rgba(46,125,50,0.18);
+}
+.btn-success:hover{ transform: translateY(-3px); }
+
+.btn-warning{
+  background: linear-gradient(90deg, #f5b82a, var(--zarape-dorado));
+  border: none;
+  color: var(--texto-oscuro);
+}
+.btn-danger{
+  background: linear-gradient(90deg, var(--zarape-rojo), #a11f0c);
+  border: none;
+  color: var(--blanco);
+}
+.btn-info{
+  background: linear-gradient(90deg, #2b9bd6, #1f7fb0);
+  border: none;
+  color: var(--blanco);
+}
+
+/* Inputs y selects */
+input.form-control, textarea.form-control, .form-select{
+  border-radius: 8px;
+  border: 1px solid rgba(33,33,33,0.08);
+  padding: .6rem .75rem;
+  transition: box-shadow .15s, border-color .12s;
+}
+input.form-control:focus, .form-select:focus{
+  outline: none;
+  box-shadow: 0 6px 18px rgba(198,40,40,0.08);
+  border-color: var(--zarape-rojo);
+}
+
+/* TABLES */
+.table thead {
+  background: linear-gradient(90deg, var(--zarape-dorado), #f3c93a);
+  color: var(--texto-oscuro);
+}
+.table thead th {
+  border: 0;
+  font-weight:700;
+}
+.table-striped tbody tr:nth-of-type(odd){
+  background: rgba(250,245,230,0.6);
+}
+.table-hover tbody tr:hover{
+  background: rgba(198,40,40,0.06);
+}
+
+/* Imagen miniatura dentro de tabla */
+.img-thumbnail{
+  border-radius: 6px;
+  border: 1px solid rgba(33,33,33,0.06);
+}
+
+/* Carousel captions (mejor legibilidad) */
+.carousel-caption{
+  background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15));
+  padding: .8rem 1.1rem;
+  border-radius: 8px;
+}
+.carousel-caption h5{
+  font-weight:700;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+}
+.carousel-caption p{
+  color: #fff;
+  opacity: .95;
+  margin-bottom: 0;
+}
+
+/* Preview imagen en formulario */
+#imgPreviewSuc{
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+  .card-header .fw-bold{ font-size: .95rem; }
+  .navbar .nav-link{ font-size: .95rem; }
+}
+
+/* Pequeños detalles */
+.container.mt-4{ padding-bottom: 1.5rem; }
