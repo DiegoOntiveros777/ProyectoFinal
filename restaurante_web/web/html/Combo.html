@@ -1,0 +1,114 @@
+<div class="container mt-4">
+
+    <!-- FORMULARIO -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-lg border-0 card-mx">
+
+                <div class="card-header header-mx-green text-white fw-bold">
+                    <i class="bi bi-box"></i> Editar Combo
+                </div>
+
+                <div class="card-body">
+
+                    <div class="row g-3">
+
+                        <!-- IZQUIERDA -->
+                        <div class="col-md-6">
+                            <div class="card p-3 shadow-sm subcard-mx">
+
+                                <label class="form-label fw-bold">ID</label>
+                                <input type="number" id="txtIdCombo" class="form-control input-mx" readonly>
+
+                                <label class="form-label mt-3 fw-bold">Nombre</label>
+                                <input type="text" id="txtNombreCombo" class="form-control input-mx">
+
+                                <label class="form-label mt-3 fw-bold">Precio</label>
+                                <input type="number" id="txtPrecioCombo" class="form-control input-mx">
+
+                                <label class="form-label mt-3 fw-bold">Foto</label>
+                                <input type="file" id="txtRutaFotoCombo" class="form-control input-mx">
+
+                            </div>
+                        </div>
+
+                        <!-- DERECHA -->
+                        <div class="col-md-6">
+                            <div class="card p-3 shadow-sm subcard-mx">
+
+                                <label class="form-label fw-bold">Descripción</label>
+                                <textarea id="txtDescripcionCombo" class="form-control input-mx" rows="6"></textarea>
+
+                                <label class="form-label mt-3 fw-bold">Activo</label>
+                                <select id="txtActivoCombo" class="form-select input-mx">
+                                    <option value="1">Activo</option>
+                                    <option value="0">Inactivo</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- BOTONES -->
+                    <div class="row mt-4">
+
+                        <div class="col-md-4">
+                            <button class="btn btn-success-mx w-100" onclick="almacenarCombo()">
+                                <i class="bi bi-plus-circle"></i> Agregar
+                            </button>
+                        </div>
+
+                        <div class="col-md-4">
+                            <button class="btn btn-warning-mx w-100" onclick="modificarCombo()">
+                                <i class="bi bi-pencil-square"></i> Modificar
+                            </button>
+                        </div>
+
+                        <div class="col-md-4">
+                            <button class="btn btn-danger-mx w-100" onclick="cancelarCombo()">
+                                <i class="bi bi-x-circle"></i> Cancelar
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TABLA -->
+    <div class="row mt-4">
+        <div class="col-12">
+
+            <div class="card shadow-lg border-0 card-mx">
+
+                <div class="card-header header-mx-blue text-white fw-bold">
+                    <i class="bi bi-list-ul"></i> Lista de Combos
+                </div>
+
+                <div class="card-body p-0" style="max-height:350px; overflow-y:auto;">
+                    <table class="table table-striped table-hover m-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Foto</th>
+                                <th>Descripción</th>
+                                <th>Activo</th>
+                                <th>Seleccionar</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbcombo"></tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
